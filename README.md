@@ -1,2 +1,5 @@
-# casp
-Calculating Association Probability of FRBs
+# CASP
+Calculating Asociation Probability of FRBs
+
+
+ 
