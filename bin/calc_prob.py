@@ -15,13 +15,13 @@ if __name__ == '__main__':
     parser.add_argument('-z', '--max_redshift', help='maximum redshift of the FRB', type=float, required=False)
     values = parser.parse_args()
 
-    p_bloom = casp.prob_bloom(R_frb=values.r, m_i=values.m, R_0=values.ro, R_h=values.rh)
-    p_eb17 = casp.prob_eb17(R_frb=values.r, m=values.m, R_0=values.ro, R_h=values.rh, ret_numgal=False)
+    p_bloom = casp.prob_bloom(R_frb=values.frb_loc_radius, m_i=values.mag, R_0=values.r_o, R_h=values.r_h)
+    p_eb17 = casp.prob_eb17(R_frb=values.frb_loc_radius, m=values.mag, R_0=values.r_o, R_h=values.r_h, ret_numgal=False)
 
-    print(f'Chance coincidence probability (Bloom et al): {p_bloom}')
-    print(f'Chance coincidence probability (Eftekhari et al): {p_eb17}')
+    print(f'Chance coincidence probability (Bloom et al): {p_bloom:.4f}')
+    print(f'Chance coincidence probability (Eftekhari et al): {p_eb17:.4f}')
 
-    if values.z:
-        p_eb17_z = casp.prob_eb17_z(z=values.z, R_frb=values.r, R_0=values.ro, R_h=values.rh, ret_numgal=False,
-                    num_galaxies_file=None)
-        print(f'Chance coincidence probability (Eftakhari et al) using redshift: {p_eb17_z}')
+    if values.max_redshift:
+        p_eb17_z = casp.prob_eb17_z(z=values.max_redshift, R_frb=values.frb_loc_radius, R_0=values.r_o, R_h=values.r_h,
+                                    ret_numgal=False)
+        print(f'Chance coincidence probability (Eftakhari et al) using redshift: {p_eb17_z:.4f}')

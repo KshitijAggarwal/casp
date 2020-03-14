@@ -76,8 +76,8 @@ def prob_eb17_z(z, R_frb, R_0=0.2, R_h=0.25, ret_numgal=False, num_galaxies_file
                 z_mins.append(row[0])
                 z_maxs.append(row[1])
                 num_total.append(row[2])
-        z_mins = np.array(z_mins)
-        z_maxs = np.array(z_maxs)
+            z_mins = np.array(z_mins)
+            z_maxs = np.array(z_maxs)
     else:
         z_mins, z_maxs, num_total = calc_num_of_galaxies()
 

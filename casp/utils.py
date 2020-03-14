@@ -2,6 +2,7 @@ from astropy.cosmology import WMAP9 as cosmo
 from scipy.integrate import quad
 from astropy.io import fits
 import numpy as np
+import os
 
 
 def get_R(R_frb, R_0=0.2, R_h=0.25):
@@ -25,7 +26,8 @@ def read_r_mags():
 
     :return:
     """
-    table = fits.open('../data/Table3MRT.fits')
+    data_path = os.path.split(__file__)[0] + '/data'
+    table = fits.open(data_path+'/Table3MRT.fits')
     data = table[1].data
     r_mask = np.concatenate((np.where(data['Filtername'] == 'r')[0],
                              np.where(data['Filtername'] == 'F606W')[0]))
@@ -99,7 +101,8 @@ def calc_num_of_galaxies(M_min=-24, M_max=None, save = False):
         num_total.append(num_dens_gal*(V_c_max - V_c_min))
         
     if save:
-        with open("../data/num_galaxies.txt","w") as f:
+        data_path = os.path.split(__file__)[0] + '/data'
+        with open(f"{data_path}/num_galaxies.txt","w") as f:
             for (z_min, z_max, num_gal) in zip(z_mins, z_maxs, num_total):
                 f.write("{0},{1},{2}\n".format(z_min, z_max, num_gal))
                 
