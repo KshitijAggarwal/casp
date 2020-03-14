@@ -6,7 +6,7 @@ from scipy.integrate import quad
 from casp.utils import *
 
 
-def p_bloom(R_frb, m_i, R_0=0.2, R_h=0.25):
+def prob_bloom(R_frb, m_i, R_0=0.2, R_h=0.25):
     """
 
     :param R_frb: The 1 sigma localization radius of the FRB
@@ -23,7 +23,7 @@ def p_bloom(R_frb, m_i, R_0=0.2, R_h=0.25):
     return 1 - np.exp(-1 * num_gal)
 
 
-def p_eb17(R_frb, m, R_0=0.2, R_h=0.25, ret_numgal=False):
+def prob_eb17(R_frb, m, R_0=0.2, R_h=0.25, ret_numgal=False):
     """
 
     :param R_frb: The 1 sigma localization radius of the FRB
@@ -55,7 +55,7 @@ def p_eb17(R_frb, m, R_0=0.2, R_h=0.25, ret_numgal=False):
         return 1 - np.exp(-1 * num_gals)
 
 
-def p_eb17_z(z, R_frb, R_0=0.2, R_h=0.25, ret_numgal=False, num_galaxies_file=None):
+def prob_eb17_z(z, R_frb, R_0=0.2, R_h=0.25, ret_numgal=False, num_galaxies_file=None):
     """
 
     :param z: Maximum redshift of the FRB
