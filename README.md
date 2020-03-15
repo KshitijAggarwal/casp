@@ -1,6 +1,8 @@
 # CASP
 Calculating Asociation Probability of FRBs
 
+If you just want a quick estimate for a few sources, you can use the web tool [here](https://kshitijaggarwal.github.io/casp/).
+
 Install
 ---
     git clone https://github.com/KshitijAggarwal/casp.git
@@ -17,7 +19,7 @@ Output will look like:
 
     Chance coincidence probability (Bloom et al): 0.0125
     Chance coincidence probability (Eftekhari et al): 0.0036
-    Chance coincidence probability (Eftakhari et al) using redshift: 0.0095
+    Chance coincidence probability (Eftekhari et al) using redshift: 0.0095
 
 Also, check out the example notebook ([here](https://github.com/KshitijAggarwal/casp/blob/master/examples/eb17_plots.ipynb)), where I have tried to reproduce some figures from [Eftekhari et al 2017](https://ui.adsabs.harvard.edu/abs/2017ApJ...849..162E/abstract).
 
