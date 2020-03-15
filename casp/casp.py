@@ -81,7 +81,7 @@ def prob_eb17_z(z, R_frb, R_0=0.2, R_h=0.25, ret_numgal=False, num_galaxies_file
     else:
         z_mins, z_maxs, num_total = calc_num_of_galaxies()
 
-    if z <= 1.2:
+    if z < 1.2:
         idx = np.where((z >= z_mins) & (z < z_maxs))[0][0]
         z_max = z_maxs[idx]
         z_min = z_mins[idx]
@@ -90,7 +90,7 @@ def prob_eb17_z(z, R_frb, R_0=0.2, R_h=0.25, ret_numgal=False, num_galaxies_file
         return -1
 
     n = 0
-    for i in range(idx):
+    for i in range(idx + 1):
         n += num_total[i]
 
     R = get_R(R_frb, R_0, R_h)
