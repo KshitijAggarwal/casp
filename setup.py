@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='casp',
-    version='0.1',
+    version='0.1.0',
     packages=['casp'],
     scripts=['bin/calc_prob.py'],
     url='https://github.com/KshitijAggarwal/casp',
