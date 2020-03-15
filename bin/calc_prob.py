@@ -27,4 +27,4 @@ if __name__ == '__main__':
             file = None
         p_eb17_z = casp.prob_eb17_z(z=values.max_redshift, R_frb=values.frb_loc_radius, R_0=values.r_o, R_h=values.r_h,
                                     ret_numgal=False, num_galaxies_file=file)
-        print(f'Chance coincidence probability (Eftakhari et al) using redshift: {p_eb17_z:.4f}')
+        print(f'Chance coincidence probability (Eftekhari et al) using redshift: {p_eb17_z:.4f}')
