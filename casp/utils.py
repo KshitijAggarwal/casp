@@ -77,11 +77,11 @@ def calc_num_of_galaxies(M_min=-24, M_max=None, save = False):
     :param M_min: Minimum absolute magnitude
     :param M_max: Maximum absolute magnitude
     :param save: To save the galaxy numbers to a file
-    :return: redshift bin edges and number of galaxies
+    :return: redshift bin edges and number of galaxies in that redshift bin
     """
     alphas = [-1.05, -1.175, -1.3, -1.3, -1.3, -1.3, -1.3]
     phi_stars = [14.9*0.7**3, 4.32, 3.53, 3.23, 3.46, 3.78, 2.5] # 10^-3 h^3 Mpc^-3 mag^-1  (h = 1)
-    Mb_stars = [-20.44, -20.54, -20.64, -20.97, -21.08, -21.22, -21.39]  # + 5 logh70         
+    Mb_stars = [-20.44+5*np.log10(0.7), -20.93, -20.64, -20.97, -21.08, -21.22, -21.39]  # + 5 logh70         
     
     z_mins = np.array([0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0])
     z_maxs = np.array([0.1, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2])
