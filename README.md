@@ -1,4 +1,8 @@
 # CASP
+
+[![DOI](https://zenodo.org/badge/246733557.svg)](https://zenodo.org/badge/latestdoi/246733557)
+
+
 Calculating Asociation Probability of FRBs
 
 If you just want a quick estimate for a few sources, you can use the web tool [here](https://kshitijaggarwal.github.io/casp/).
