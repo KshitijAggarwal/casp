@@ -36,7 +36,7 @@ Requirements
 Citation
 ---
 Please cite the following papers if you used `casp`: 
-* Aggarwal et al (in prep.)
+* [Aggarwal et al 2021](https://ui.adsabs.harvard.edu/abs/2021arXiv210403991A/abstract)
 * [Eftekhari et al 2017](https://ui.adsabs.harvard.edu/abs/2017ApJ...849..162E/abstract)
 * [Bloom et al 2003](https://ui.adsabs.harvard.edu/abs/2002AJ....123.1111B/abstract)
 
